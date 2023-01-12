@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  --primary-color-light: rgb(210, 226, 230);
+  --green: rgba(62, 221, 89, 0.671);
+  --green-darker: rgb(7, 161, 32);
+  --yellow: rgba(225, 240, 23, 0.493);
+  --yellow-darker: rgba(255, 238, 0, 0.959);
+  --red: rgba(226, 80, 61, 0.658);
+  --red-darker: rgba(255, 30, 0, 0.938);
+  --dark: rgb(0, 0, 0);
+  --grey: rgb(218, 218, 218);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+input {
+  text-transform: capitalize;
+}
+
+li {
+  padding: 8px;
+  counter-increment: li;
+  font-size: 16px;
+  width: 100%;
+}
+
+.container {
+  max-width: 640px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.container, h1 {
+  text-align: center;
+}
+
+.watch {
+  font-size: 45px;
+}
+
+.list-tasks {
+  list-style: none;
+}
+
+.add-button {
+  color: var(--dark);
+  font-size: 15px;
+  padding: 10px;
+  background-color: var(--green);
+  border: none;
+  border-radius: 10px;
+  margin: 0 6px 0 6px;
+}
+
+.del-button {
+  color: var(--dark);
+  font-size: 12px;
+  padding: 8px;
+  background-color: var(--red);
+  border: none;
+  border-radius: 10px;
+  margin: 0 6px 0 6px;
+}
+
+.add-button:hover {
+  background-color: var(--green-darker);
+}
+
+.del-button:hover {
+  background-color: var(--red-darker);
+}
+
+.container-add-task {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+li:hover {
+  border-radius: 10px;
+  background-color: var(--grey);
+  transition: all 300ms ease-in-out;
+}
+
+li::marker {
+  display: list-item;
+  content: counter(li) "  ";
+  font-weight: bold;
+}
+
+.task {
+  font-size: 15px;
+  padding: 8px;
+  border-radius: 10px;
+}
